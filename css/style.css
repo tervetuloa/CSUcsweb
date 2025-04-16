@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset + Base */
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +9,9 @@
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #4ade80;
-    background: url('../images/esportscsu.jpg') no-repeat center center fixed;
+    background: url('../images/esportcsu.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #4ade80;
   }
   
   /* Header */
@@ -33,9 +33,10 @@
     font-weight: 700;
     color: #4ade80;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
   
-  /* Main navigation */
+  /* Main nav */
   main {
     display: flex;
     justify-content: flex-start;
