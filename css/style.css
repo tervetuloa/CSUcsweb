@@ -3,87 +3,83 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html, body {
+  }
+  
+  html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #4ade80;
     background-color: black;
-    overflow: hidden;
-}
-
-/* Background image from HTML <img> */
-.background-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -2;
-}
-
-/* Semi-transparent dark overlay to increase text contrast */
-.overlay {
+  }
+  
+  /* Apply the image as a background directly */
+  body {
+    background: url('../images/esportscsu.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Dark overlay on top of background image */
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* adjust opacity here */
-    z-index: -1;
-}
-
-/* Header layout */
-header {
+    z-index: 0;
+  }
+  
+  /* Header */
+  header {
     display: flex;
     align-items: center;
     gap: 1em;
     padding: 2em;
-}
-
-header img {
+    position: relative;
+    z-index: 1;
+  }
+  
+  header img {
     height: 60px;
     width: auto;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     font-size: 2.5em;
     color: #4ade80;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-}
-
-/* Main nav layout */
-main {
+  }
+  
+  /* Main nav */
+  main {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     height: calc(100vh - 120px);
     padding: 2em 4em;
-}
-
-/* Navigation List */
-nav ul {
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     margin-bottom: 2.2em;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     text-decoration: none;
     font-size: 3.2em;
     font-weight: bold;
     color: #4ade80;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     transition: transform 0.2s ease, color 0.2s ease;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #34d399;
     transform: scale(1.05);
-}
+  }
