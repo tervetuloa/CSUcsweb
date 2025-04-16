@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,29 +8,29 @@
 html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #aef0cc;
+    color: #4ade80;
     background-color: black;
+    overflow: hidden;
 }
 
-/* Darkened Background Image */
+/* Background image from HTML <img> */
 .background {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background: url('../images/esportscsu.jpg') no-repeat center center;
-    background-size: cover;
-    filter: brightness(35%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
     z-index: -1;
+    filter: brightness(60%);
 }
 
-/* Header Styles */
+/* Header */
 header {
     display: flex;
     align-items: center;
     gap: 1em;
-    padding: 1.5em 2em;
+    padding: 2em;
 }
 
 header img {
@@ -39,37 +39,41 @@ header img {
 }
 
 header h1 {
-    font-size: 1.8em;
-    color: #aef0cc;
+    font-size: 2.5em;
+    color: #4ade80;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Main Navigation Area */
+/* Main nav */
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: calc(100vh - 120px);
+    padding: 2em 4em;
 }
 
+/* Nav List */
 nav ul {
     list-style: none;
-    text-align: left;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 1em 0;
+    margin-bottom: 2em;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
-    color: #aef0cc;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    transition: color 0.2s ease, transform 0.2s ease;
+    color: #4ade80;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-    color: #6ef4c6;
+    color: #34d399;
     transform: scale(1.05);
 }
