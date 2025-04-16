@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset + Base */
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +14,28 @@ html, body {
 }
 
 /* Background image from HTML <img> */
-.background {
+.background-img {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
-    filter: brightness(60%);
+    z-index: -2;
 }
 
-/* Header */
+/* Semi-transparent dark overlay to increase text contrast */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* adjust opacity here */
+    z-index: -1;
+}
+
+/* Header layout */
 header {
     display: flex;
     align-items: center;
@@ -44,7 +54,7 @@ header h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Main nav */
+/* Main nav layout */
 main {
     display: flex;
     justify-content: flex-start;
@@ -53,7 +63,7 @@ main {
     padding: 2em 4em;
 }
 
-/* Nav List */
+/* Navigation List */
 nav ul {
     list-style: none;
     padding: 0;
@@ -61,12 +71,12 @@ nav ul {
 }
 
 nav ul li {
-    margin-bottom: 2em;
+    margin-bottom: 2.2em;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: bold;
     color: #4ade80;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
