@@ -9,12 +9,36 @@
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('../images/esportcsu.jpg') no-repeat center center fixed;
-    background-size: cover;
+    position: relative;
     color: #4ade80;
+    overflow-x: hidden;
   }
   
-  /* Full-width white header bar */
+  /* Background image with overlay using pseudo-element */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/esportcsu.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -2;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45); /* dark overlay */
+    z-index: -1;
+  }
+  
+  /* White header bar */
   header {
     width: 100%;
     background-color: white;
@@ -24,7 +48,7 @@
     position: relative;
   }
   
-  /* Center content in header */
+  /* Logo + Title Container */
   .header-content {
     display: flex;
     align-items: center;
@@ -33,29 +57,29 @@
     gap: 1em;
   }
   
-  /* CSU logo */
+  /* Logo */
   header img {
     height: 60px;
     width: auto;
   }
   
-  /* Divider line */
+  /* Divider */
   .divider {
     height: 50px;
     width: 2px;
-    background-color: #1e4d2b; /* CSU green */
+    background-color: #1e4d2b;
   }
   
-  /* COUNTER-STRIKE 2 title */
+  /* Title */
   header h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.2em;
     font-weight: 600;
-    color: #1e4d2b; /* CSU green */
+    color: #1e4d2b;
     text-transform: uppercase;
   }
   
-  /* Navigation area */
+  /* Navigation */
   main {
     display: flex;
     justify-content: flex-start;
