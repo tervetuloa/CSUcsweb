@@ -1,1 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../images/esportscsu.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay for better text contrast */
+    height: 100vh;
+    padding: 2em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+header h1 {
+    color: #cfeee9;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 2em 0 0 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 0.8em;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px black;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #90ee90;
+}
