@@ -77,7 +77,7 @@
   }
   
   .page-content {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 3em auto;
     background-color: #1f2937;
     padding: 2em;
@@ -94,7 +94,7 @@
   
   .page-content p {
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 1em;
   }
   
@@ -109,4 +109,3 @@
     list-style-type: disc;
     color: #d1fae5;
   }
-  
