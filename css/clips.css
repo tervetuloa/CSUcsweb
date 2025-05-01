@@ -8,40 +8,18 @@
     height: 100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111827;
     color: #4ade80;
     overflow-x: hidden;
-  }
-  
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('../images/esportcsu.jpg') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -2;
-  }
-  
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.45);
-    z-index: -1;
   }
   
   header {
     width: 100%;
     background-color: white;
-    padding: 1.5em 2em;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    padding: 0.75em 2em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    z-index: 10;
   }
   
   .header-content {
@@ -53,19 +31,19 @@
   }
   
   header img {
-    height: 60px;
+    height: 48px;
     width: auto;
   }
   
   .divider {
-    height: 50px;
+    height: 36px;
     width: 2px;
     background-color: #1e4d2b;
   }
   
   header h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-weight: 600;
     color: #1e4d2b;
     text-transform: uppercase;
@@ -73,10 +51,9 @@
   
   .main-nav {
     width: 100%;
-    padding: 1em 0;
+    background-color: white;
+    padding: 0.5em 0;
     text-align: center;
-    position: relative;
-    z-index: 2;
   }
   
   .main-nav ul {
@@ -89,35 +66,55 @@
   
   .main-nav ul li a {
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
-    color: #4ade80;
+    color: #1e4d2b;
     transition: color 0.2s ease;
   }
   
   .main-nav ul li a:hover {
-    color: #34d399;
+    color: #4ade80;
   }
   
   .page-content {
-    padding: 3em 4em;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  .page-content h2 {
-    font-size: 2.2em;
-    margin-bottom: 0.5em;
-  }
-  
-  .page-content p,
-  .page-content ul {
-    font-size: 1.1em;
-    line-height: 1.6;
+    max-width: 1100px;
+    margin: 3em auto;
+    background-color: #1f2937;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
     color: #bbf7d0;
   }
   
-  .page-content ul li {
-    margin-bottom: 0.75em;
+  .page-content h2 {
+    font-size: 2em;
+    grid-column: 1 / -1;
+    margin-bottom: 0.5em;
   }
+  
+  .page-content p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .embed {
+    grid-column: span 1;
+  }
+  
+  .embed iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .caption {
+    margin-top: 0.5em;
+    font-size: 0.95em;
+    color: #d1fae5;
+  }
+  
   
