@@ -89,11 +89,12 @@
   .page-content h2 {
     font-size: 2em;
     margin-bottom: 1em;
+    color: #4ade80;
   }
   
   .page-content p {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 1em;
   }
   
@@ -104,7 +105,8 @@
   
   .page-content ul li {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.6;
     list-style-type: disc;
     color: #d1fae5;
   }
+  
