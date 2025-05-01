@@ -109,3 +109,53 @@
   nav ul li a:hover {
     color: #34d399;
   }
+
+
+  .main-nav {
+    width: 100%;
+    background-color: transparent;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+  
+  .main-nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4ade80;
+    transition: color 0.2s ease;
+  }
+  
+  .main-nav ul li a:hover {
+    color: #34d399;
+  }
+  
+  /* Optional: welcome section styling */
+  .intro-text {
+    margin-top: 4em;
+    color: #bbf7d0;
+  }
+  
+  .intro-text h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+  
+  .intro-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  
