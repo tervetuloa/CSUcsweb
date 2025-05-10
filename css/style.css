@@ -13,23 +13,38 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Background video styles */
+/* Background video - STARTS BELOW HEADER */
 #bg-video {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  top: 120px; /* Matches header height */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px); /* Full height minus header */
   object-fit: cover;
-  z-index: -2;
+  z-index: -3;
 }
 
+/* Gradient overlay for better contrast */
+body::after {
+  content: "";
+  position: fixed;
+  top: 120px; /* Starts below header */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: -2;
+  pointer-events: none;
+}
 
+/* Header styles */
 header {
   width: 100%;
+  height: 120px;
   background-color: white;
   padding: 1.5em 2em;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -43,6 +58,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   gap: 1em;
+  height: 100%;
 }
 
 header img {
@@ -61,17 +77,19 @@ header h1 {
   font-size: 2.2em;
   font-weight: 600;
   color: #1e4d2b;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
+/* Main content and navigation */
 main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 3em 4em;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
   position: relative;
   z-index: 1;
+  margin-top: 120px; /* Push content below header */
 }
 
 nav ul {
@@ -90,24 +108,27 @@ nav ul li:last-child {
 nav ul li a {
   text-decoration: none;
   font-size: 2.5em;
-  font-weight: bold;
+  font-weight: 600;
   color: #4ade80;
   transition: all 0.3s ease;
   display: inline-block;
-  text-transform: lowercase; 
+  text-transform: lowercase;
   letter-spacing: 1px;
   padding: 0.2em 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav ul li a:hover {
   color: #34d399;
   transform: translateX(5px);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
   header {
     padding: 1em;
+    height: auto;
   }
   
   .header-content {
@@ -127,8 +148,13 @@ nav ul li a:hover {
   
   main {
     padding: 2em;
-    height: auto;
-    min-height: calc(100vh - 120px);
+    margin-top: 90px; /* Adjusted for mobile header */
+  }
+  
+  #bg-video,
+  body::after {
+    top: 90px; /* Matches mobile header height */
+    height: calc(100% - 90px);
   }
   
   nav ul li a {
@@ -139,5 +165,4 @@ nav ul li a:hover {
     margin-bottom: 1.8em;
   }
 }
-
 
