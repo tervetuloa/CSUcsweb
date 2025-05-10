@@ -72,6 +72,7 @@ main {
   height: calc(100vh - 120px);
   position: relative;
   z-index: 1;
+  background: transparent;
 }
 
 nav ul {
@@ -79,7 +80,7 @@ nav ul {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2em;
   border-radius: 10px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
 }
 
 nav ul li {
