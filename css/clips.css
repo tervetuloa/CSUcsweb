@@ -78,7 +78,7 @@ header h1 {
 
 main {
   min-height: calc(100vh - 130px);
-  background: url('../images/cs2nuke.jpg') center center fixed;
+  background: url('../images/dust2.jpg') center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
