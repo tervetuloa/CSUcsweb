@@ -137,15 +137,18 @@ main::before {
 .event-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
 }
 
 .event-gallery img {
   height: auto;
   width: auto;
-  max-width: 300px;
-  max-height: 200px;
-  object-fit: cover;
+  max-width: 420px;
+  max-height: 280px;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
