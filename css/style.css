@@ -1,105 +1,55 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-  color: #4ade80;
-  overflow-x: hidden;
-  background-color: #000;
-}
-
-/* Background video */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-/* Overlay to darken video */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-header {
-  width: 100%;
-  background-color: white;
-  padding: 1.5em 2em;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  position: relative;
-}
-
-.header-content {
+.homepage-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 3em;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 1em;
-}
-
-header img {
-  height: 60px;
-  width: auto;
-}
-
-.divider {
-  height: 50px;
-  width: 2px;
-  background-color: #1e4d2b;
-}
-
-header h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.2em;
-  font-weight: 600;
-  color: #1e4d2b;
-  text-transform: uppercase;
-}
-
-main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 3em 4em;
-  height: calc(100vh - 120px);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-nav ul {
+.homepage-nav ul {
   list-style: none;
+  padding: 0;
 }
 
-nav ul li {
-  margin-bottom: 2em;
+.homepage-nav ul li {
+  margin-bottom: 1.2em;
 }
 
-nav ul li a {
+.homepage-nav ul li a {
   text-decoration: none;
-  font-size: 3em;
+  font-size: 1.75em;
   font-weight: bold;
   color: #4ade80;
   transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
+.homepage-nav ul li a:hover {
   color: #34d399;
 }
+
+.welcome {
+  max-width: 600px;
+  background-color: rgba(31, 41, 55, 0.9);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #bbf7d0;
+}
+
+.welcome h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  color: #4ade80;
+}
+
+.welcome p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
 
 
